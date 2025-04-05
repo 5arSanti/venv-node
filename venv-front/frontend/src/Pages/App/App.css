@@ -1,0 +1,21 @@
+:root {
+	--pallete-1: #F9E8FF;
+	--pallete-2: #DD53EC;
+	--pallete-3: #E8FFFF;
+	--pallete-4: #60D0FD;
+	--pallete-5: #BFFFC1;
+
+	--black: #000000;
+
+	--to-do-1: #C8FBFF;
+	--to-do-2: #A8FFF9;
+
+	--process-1: #FBFFC8;
+	--process-2: #f6f9b6;
+
+	--done-1: #E1C8FF;
+	--done-2: #BF87FF;
+
+	--delete: #FFC8C9;
+	--close: #FFC8C9;
+}
