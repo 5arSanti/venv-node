@@ -3,7 +3,7 @@ import { ButtonCard } from "../ButtonCard";
 import { InputCard } from "../InputsCards";
 import { WrapperContainer2 } from "../WrapperContainers";
 
-const Form = ({ values, setValues, onSumbit }) => {
+const Form = ({ values, setValues }) => {
     const onSubmit = async (e) => {
         e.preventDefault();
 
@@ -13,10 +13,12 @@ const Form = ({ values, setValues, onSumbit }) => {
                 body: JSON.stringify(values),
             })
             const data = await response.json();
+            console.log(data)
+
             if (response.ok) {
                 alert("Form submitted successfully:", data);
             } else {
-                alert("Error submitting form:", data.message);
+                alert(`Error submitting form: ${data.message}`);
             }
         }
         catch (error) {
