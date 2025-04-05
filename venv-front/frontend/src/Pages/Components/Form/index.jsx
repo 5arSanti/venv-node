@@ -47,10 +47,9 @@ const Form = ({ values, setValues, onSumbit }) => {
                 />
 
                 <ButtonCard
-                    type="submit"
                     id="submit"
+                    type="submit"
                     label="Enviar formulario"
-                    style={{ width: "100%" }}
                 >
                     Enviar formulario
                 </ButtonCard>

@@ -2,36 +2,24 @@ const express = require("express");
 
 const router = express.Router();
 
+router.get("/", (request, response) => {
+	return response.status(200).json({ Status: "Success", message: "GET request successful" });
+})
+
 router.post("/", (request, response) => {
 	try {
-		const { Titulo, Descripcion } = request.body;
+		console.log("Received POST request:", request.body);
+		const { name, last_name, phone, email } = request.body;
 
-		if (!Titulo || !Descripcion) {
-			return response.status(400).json({ Status: "Error", message: "Faltan datos" })
+		if (!name || !last_name || !phone || !email) {
+			return response.status(400).json({ Status: "Error", message: "Missing required fields" });
 		}
 
-		if (Titulo === "") {
-			return response.status(400).json({ Status: "Error", message: "El titulo no puede estar vacio" })
+		if (typeof name !== "string" || typeof last_name !== "string" || typeof phone !== "number" || typeof email !== "string") {
+			return response.status(400).json({ Status: "Error", message: "Invalid data types" });
 		}
 
-		const query = `
-            INSERT INTO Tareas (
-                Titulo,
-                Descripcion,
-                ID_Estado_Tarea
-            )
-            VALUES (
-                '${Titulo}',
-                '${Descripcion}',
-                1
-            )
-        `;
-
-		sql.query(query, (err, result) => {
-			if (err) { return response.status(500).json({ Status: "Error", message: err.message }) }
-
-			return response.status(200).json({ Status: "Success", message: "Tarea creada correctamente" })
-		})
+		console.log("Received data:", request.body);
 	}
 	catch (error) {
 		console.log(error)
