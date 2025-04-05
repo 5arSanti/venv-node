@@ -10,7 +10,11 @@ const Form = ({ values, setValues }) => {
         try {
             const response = await fetch(`${api}/tasks`, {
                 method: "POST",
+                mode: "cors",
                 body: JSON.stringify(values),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
             })
             const data = await response.json();
             console.log(data)

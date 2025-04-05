@@ -1,21 +1,21 @@
 const express = require("express");
 const cors = require("cors");
-const { routerApi } = require("./routes");
+const { routerApi } = require("./routes/index.js");
 
 const app = express();
 
 const options = {
-    origin: true,
-    methods: ["GET", "POST", "PUT", "DELETE"],
+    origin: "*",
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
 }
 
 app.use(express.json())
-app.use(cors(options))
+app.use(cors(options));
 
 routerApi(app);
 
-app.get("/", (request, response) => {
-    return response.send("Hola desde el servidor backend del reto")
-})
+app.get("/", (_, response) => {
+    return response.send("Hola desde el servidor backend del reto");
+});
 
 module.exports = app;
