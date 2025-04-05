@@ -1,5 +1,3 @@
-import { Fade } from "react-awesome-reveal";
-
 import "./styles.css";
 
 const WrapperContainer1 = ({children, flexDirection = "row", padding = 20, gap = 15, justifyContent="start", alignItems="center"}) => {

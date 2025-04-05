@@ -1,6 +1,6 @@
 import "./styles.css";
 
-const SubTitle = ({children, textAlign = "start", fontSize=20}) => {
+const SubTitle = ({children, textAlign = "start", fontSize=24}) => {
 
     return(
         <div className={`

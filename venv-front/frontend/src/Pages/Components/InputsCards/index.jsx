@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { AiOutlineCloudUpload } from "react-icons/ai";
 import "./styles.css";
 import React from "react";
@@ -6,7 +5,6 @@ import { GridContainer } from "../GridContainer";
 import { WrapperContainer2 } from "../WrapperContainers";
 import { SpanCard, TextCard } from "../TextComponents";
 
-// eslint-disable-next-line react/prop-types
 const InputCard = ({
     type = "text",
     id,
