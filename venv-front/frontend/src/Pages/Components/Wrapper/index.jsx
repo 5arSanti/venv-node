@@ -17,6 +17,7 @@ const Wrapper = () => {
 	})
 	
 
+    console.log(values)
 
 	return (
 		<WrapperContainer2 padding={50}>

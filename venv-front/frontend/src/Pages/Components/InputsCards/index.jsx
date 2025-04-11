@@ -27,7 +27,7 @@ const InputCard = ({
                 placeholder={placeholder ? placeholder : label}
                 name={id}
                 id={id}
-                onChange={(event) => { onChange(event.target.value) }}
+                onChange={(event) => { onChange(event.target) }}
                 required={required}
                 defaultValue={defaultValue}
                 pattern={pattern}

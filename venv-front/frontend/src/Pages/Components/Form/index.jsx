@@ -30,6 +30,16 @@ const Form = ({ values, setValues }) => {
         }
     }
 
+
+    const handleChange = (target) => {
+        const { name, value } = target;
+        
+        setValues((prevValues) => ({
+            ...prevValues,
+            [name]: value,
+        }));
+    }
+
     return (
         <form style={{ width: "100%" }} onSubmit={onSubmit}>
             <WrapperContainer2 padding={20} style={{ width: "100%" }} flexDirection="column" gap={20}>
@@ -38,7 +48,7 @@ const Form = ({ values, setValues }) => {
                     id="name"
                     label="Nombre"
                     placeholder="Nombre"
-                    onChange={(value) => (setValues({ ...values, name: value }))}
+                    onChange={handleChange}
                     required={true}
                     defaultValue={values.name}
                 />
@@ -48,7 +58,7 @@ const Form = ({ values, setValues }) => {
                     id="last_name"
                     label="Apellido"
                     placeholder="Apellido"
-                    onChange={(value) => (setValues({ ...values, last_name: value }))}
+                    onChange={handleChange}
                     required={true}
                     defaultValue={values.last_name}
                 />
@@ -58,7 +68,7 @@ const Form = ({ values, setValues }) => {
                     id="phone"
                     label="Teléfono"
                     placeholder="Teléfono"
-                    onChange={(value) => (setValues({ ...values, phone: value }))}
+                    onChange={handleChange}
                     required={true}
                     defaultValue={values.phone}
                 />
@@ -68,7 +78,7 @@ const Form = ({ values, setValues }) => {
                     id="email"
                     label="Email"
                     placeholder="Email"
-                    onChange={(value) => (setValues({ ...values, email: value }))}
+                    onChange={handleChange}
                     required={true}
                     defaultValue={values.email}
                 />
