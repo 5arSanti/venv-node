@@ -32,5 +32,7 @@ try:
     success_message = wait.until(EC.presence_of_element_located((By.ID, 'mensaje-exito')))
     assert "Exitoso" in success_message.text
 
+    print("Test passed: Form submitted successfully.")
+
 finally:
     driver.quit()
