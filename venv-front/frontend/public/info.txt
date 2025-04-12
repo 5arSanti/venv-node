@@ -1,0 +1,25 @@
+Una historia de usuario es una breve descripción que se hace desde la perspectiva del usuario para explicar una funcionalidad o característica que se quiere implementar en un producto o sistema. Se utiliza para entender de manera clara y sencilla lo que el usuario necesita y por qué, ayudando así a priorizar y enfocar el desarrollo.
+
+Estructura básica:
+Generalmente sigue este formato:
+
+Como [rol o tipo de usuario]
+
+Quiero [acción o funcionalidad]
+
+Para [beneficio o razón]
+
+Ejemplo:
+"Como cliente, quiero poder ver mi historial de pedidos para revisar mis compras anteriores."
+
+
+Generalmente, las historias de usuario son creadas por el Product Owner o por el encargado del producto, ya que él o ella es el puente entre el cliente o usuario y el equipo de desarrollo.
+
+
+La "armonía" en este contexto se refiere a cómo se integran y relacionan las historias de usuario dentro del proceso ágil. Esto se logra mediante:
+
+Colaboración constante: Tanto el Product Owner como el equipo participan en la creación y refinamiento de las historias, lo que fomenta el entendimiento común y mejora la calidad de las especificaciones.
+
+Prioridad en el valor: Se organizan y priorizan de forma que siempre se trabaje primero en aquello que aportará mayor beneficio al usuario y al negocio.
+
+Retroalimentación continua: Durante el desarrollo se reciben comentarios y se realizan ajustes, permitiendo que el producto evolucione de manera coherente con lo que necesita el usuario.
