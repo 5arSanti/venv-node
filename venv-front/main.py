@@ -4,12 +4,10 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 import time
 
-options = Options()
-options.add_argument('--user-data-dir=/workspaces/venv-node/venv-front/chrome-data')
 
-driver = webdriver.Chrome(options=options)
+driver = webdriver.Chrome()
 
-driver.get("https://automatic-xylophone-px7prgx9jj6265g6-5174.app.github.dev/")
+driver.get("http://localhost:5173")
 
 name_input = driver.find_element(By.ID, "name")
 
@@ -25,6 +23,8 @@ name_input.send_keys("John")
 last_name_input.send_keys("Doe")
 
 email_input.send_keys("test@mail.com")
+
+phone_input.send_keys("1234567890")
 
 submit_button = driver.find_element(By.XPATH, '//button[@type="submit"]')
 

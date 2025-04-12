@@ -83,7 +83,7 @@ const Form = ({ values, setValues }) => {
                     defaultValue={values.email}
                 />
 
-                <p id="mensaje-exito"></p>
+                <p id="mensaje-exito">Exitoso</p>
 
                 <ButtonCard
                     id="submit"
